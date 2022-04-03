@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Szachownica Inline-block</title>
     <style>
-        /* * {
+        * {
             margin: 0;
-        } */
+            /* padding: 0; */
+        }
 
-        
         div.board {
             /* box-sizing: border-box; */
             position: absolute;
@@ -19,7 +19,7 @@
             left: calc(50% - 15vw - 10px);
             width: 30vw;
             height: 30vw;
-            border: 10px black solid;
+            border: 10px solid black;
             font-size: 0;
         }
 
@@ -34,6 +34,16 @@
             background-color: red;
         }
 
+        /* span:first-child {
+            top: 0;
+            left: 0;
+        }
+
+        span:last-child {
+            bottom: 0;
+            right: 0;
+        } */
+
         h1 {
             position: absolute;
             bottom: 10%;
@@ -43,6 +53,8 @@
             font-size: 22px;
             text-align: center;
             text-transform: lowercase;
+            /* position: relative;
+            margin-top: calc(50vh + 25vw); */
         }
     </style>
 </head>

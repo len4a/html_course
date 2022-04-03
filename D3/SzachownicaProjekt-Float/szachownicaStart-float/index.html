@@ -1,13 +1,3 @@
-<!-- 
-Zrób szachownicę wykorzystująć float dla każdego pola
-Nie możesz określić wysokości div z klasą board (określi tylko szerokosć na 30vw)
-
-Wycentruj szachownicę tylko w poziomie. Szachownica ma być position static.
-Szachownica ma mieć 30% szerokości okna przeglądarki i dodatkowo border: 10px czarny.
-
-Tekst ma być pod szachownicą. Właściwość position h1 musi być static.
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,39 +7,47 @@ Tekst ma być pod szachownicą. Właściwość position h1 musi być static.
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Szachownica Float</title>
     <style>
-        
-        *{
-            margin: 0;
-            box-sizing: border-box;
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
         }
 
-        .board {
+        div.board {
+            /* box-sizing: border-box; */
+            /* margin-top: 50px;
+            margin-left: calc(50% - 15vw); */
             width: 30vw;
             border: 10px solid black;
+            margin: 50px auto;
+            /* overflow: hidden; */
+            /* overflow: auto; */
+            /* height: 30vw; */
         }
 
-        span {position: static;
+        span {
             float: left;
-            /* text-align: center; */
-            width: 50px;
-            height: 50px;
+            width: 50%;
+            height: 15vw;
+            /* height: calc(15vw - 10px); */
         }
 
-        span:nth-of-type(odd) {
-            color: red;
+        span:nth-child(1),
+        span:nth-child(4) {
+            background-color: red;
         }
 
-        h1 {position: static;
+        h1 {
             text-align: center;
             font-family: arial;
-            font-size: 16px;
+            font-size: 22px;
             text-transform: lowercase;
         }
     </style>
 </head>
 
 <body>
-    <div class="board">
+    <div class="board clearfix">
         <span></span>
         <span></span>
         <span></span>

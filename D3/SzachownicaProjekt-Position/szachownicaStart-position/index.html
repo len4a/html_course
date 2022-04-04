@@ -1,13 +1,3 @@
-<!-- 
-Zrób szachownicę wykorzystując position absolute dla pól szachownicy.
-Określ szerokość szachownicy na 50% i wysokosć na 50vw; Sprawdź czy są to te same wielkości i uzasadnij dlaczego :)
-Pola szachownicy mają być wypozycjonowane względem div.board
-
-Wycentruj szachownicę w poziomie i pionie wykorzystując calc() i position: absolute.
-Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position relative dla h1.
-
- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,15 +9,19 @@ Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position rela
     <style>
         * {
             margin: 0;
-            /* box-sizing: border-box; */
+            padding: 0;
         }
-        
 
         div.board {
             position: absolute;
+            top: calc(50% - 25vw);
+            left: calc(50% - 25%);
+            /* top: 50%;
+            left: 50%;
+            margin-top: -25vw;
+            margin-left: -25vw; */
             width: 50%;
             height: 50vw;
-            /* margin: 50vh auto; */
             border: 10px solid black;
         }
 
@@ -37,16 +31,30 @@ Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position rela
             height: 50%;
         }
 
-        span:nth-of-type(odd) {
-            color: red;
+        span:nth-child(1) {
+            background-color: red;
+            top: 0;
+            left: 0;
+            /* bottom: 50%;
+            right: 50%; */
+        }
+
+        span:nth-child(4) {
+            background-color: red;
+            bottom: 0;
+            right: 0;
+            /* top: 50%;
+            left: 50%; */
         }
 
         h1 {
             position: relative;
             text-align: center;
+            top: 90vh;
+            line-height: 10vh;
             font-family: arial;
-            font-size: 16px;
-            text-transform: lowercase;
+            font-size: 22px;
+            text-transform: uppercase;
         }
     </style>
 </head>

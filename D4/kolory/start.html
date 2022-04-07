@@ -5,9 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zadanie 1 - zmiana koloru po najechaniu</title>
+    <title>zmiana koloru po najechaniu</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        p {
+            font-family: arial;
+            font-size: 22px;
+            text-transform: uppercase;
+            text-align: center;
+            /* opacity: 0; */
+        }
+
+        div {
+            /* position: relative; */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transition: 1s;
+        }
+
+        div.red {
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: red;
+        }
+
+        div.green {
+            margin-top: 10px;
+            margin-right: 90px;
+            background-color: green;
+        }
+
+        div.blue {
+            background-color: blue;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        div.orange {
+            background-color: orange;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        div.bg {
+            text-align: center;
+        }
+
+        p.red {
+            /* margin-top: 50vh; */
+
+        }
+
+
+
+        div.red:hover body {
+            background-color: red;
+        }
     </style>
 </head>
 

@@ -11,66 +11,84 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            background-color: gray;
-        }
-
-        p {
-            font-family: arial;
-            font-size: 22px;
-            text-transform: uppercase;
-            text-align: center;
-            /* opacity: 0; */
-        }
-
-        div {
-            /* position: relative; */
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
+        div.bg {
+            height: 100vh;
+            background-color: rgb(186, 186, 186);
             transition: 1s;
         }
 
+        div.circle {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            z-index: 1;
+        }
+
         div.red {
-            margin-top: 10px;
-            margin-left: 10px;
+            top: 20px;
+            left: 20px;
             background-color: red;
         }
 
         div.green {
-            margin-top: 10px;
-            margin-right: 90px;
+            top: 20px;
+            right: 20px;
             background-color: green;
         }
 
         div.blue {
+            bottom: 20px;
+            left: 20px;
             background-color: blue;
-            margin-bottom: 10px;
-            margin-left: 10px;
         }
 
         div.orange {
+            bottom: 20px;
+            right: 20px;
             background-color: orange;
-            margin-bottom: 10px;
-            margin-right: 10px;
         }
 
-        div.bg {
+        .bg p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 100vh;
+            width: 100%;
             text-align: center;
+            font-size: 32px;
+            font-family: arial;
+            text-transform: uppercase;
+            color: white;
+            opacity: 0;
+            transition: 1s;
         }
 
-        p.red {
-            /* margin-top: 50vh; */
-
-        }
-
-
-
-        div.red:hover body {
+        div.red:hover~div.bg {
             background-color: red;
+        }
+
+        div.green:hover~div.bg {
+            background-color: green;
+        }
+
+        div.blue:hover~div.bg {
+            background-color: blue;
+        }
+
+        div.orange:hover~div.bg {
+            background-color: orange;
+        }
+
+        div.red:hover~div.bg p.red,
+        div.green:hover~div.bg p.green,
+        div.blue:hover~div.bg p.blue,
+        div.orange:hover~div.bg p.orange {
+            opacity: 1;
         }
     </style>
 </head>
